@@ -23,19 +23,19 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <i class="fa-brands fa-instagram"></i>
+                    <a target="_blank" href="https://www.instagram.com/alarmingladder/?hl=en"><i class="fa-brands fa-instagram"></i></a>
                   </li>
                   <li class="nav-item">
-                    <i class="fa-brands fa-youtube"></i>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCJNJ6AuTlDZV9p4emVbIRpg"><i class="fa-brands fa-youtube"></i></a>
                   </li>
                   <li class="nav-item">
-                    <i class="fa-brands fa-twitter"></i>
+                    <a target="_blank" href="https://twitter.com/AlarmingLadder"><i class="fa-brands fa-twitter"></i></a>
                   </li>
                   <li class="nav-item">
-                    <i class="fa-brands fa-discord"></i>
+                    <a target="_blank" href="https://discord.com/invite/SGM8r9n2M7"><i class="fa-brands fa-discord"></i></a>
                   </li>
                   <li class="nav-item">
-                    <i class="fa-brands fa-tiktok"></i>
+                    <a target="_blank" href="https://www.tiktok.com/@alarmingladderstudios"><i class="fa-brands fa-tiktok"></i></a>
                   </li>
                 </ul>
               </div>
@@ -43,8 +43,13 @@
           </nav>
       </section>
       <section id="title">
-        <h1>Ascending to greatness</h1>
-        <p>Home of Alarming Ladder Studios</p>
+        <div class="title-text">
+        <h1>Alarming Ladder Studios</h1>
+        <img class="ladder-giphy" src="https://media.giphy.com/media/rCKslsUwS8jbsNwKhj/giphy.gif" alt="Ladder Giphy">
+        <p>Ascending to Greatness</p>
+        
+      </div>
+        <video class="bv-video"></video>
       </section>
       <section id="about">
         <h2>About Us</h2>
@@ -79,7 +84,7 @@
                 <img class="team-photo" src="/Images/Daniel_Photo.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Daniel Wiltshire</h5>
-                  <p class="card-text">Studio Director/Designer</p>
+                  <p class="card-text">Studio Director / Designer</p>
                 </div>
               </div>
             </div>
@@ -112,7 +117,7 @@
             </div>
             <div class="col">
               <div class="card text-bg-dark border-light">
-                <img class="team-photo" src="/Images/Danny_Photo.png" class="card-img-top" alt="...">
+                <img class="team-photo" src="/Images/Tom_Photo.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Tom Jacobs</h5>
                   <p class="card-text">Programmer</p>
@@ -129,10 +134,27 @@
         <i class="fa-brands fa-discord"></i>
         <i class="fa-brands fa-twitter"></i>
       </section>
-      <section id="footer"></section>
+      <section id="footer">
+
+      </section>
+
+      <script src="/script.js"></script>
+      <script src="/Scripts/backgroundVideo.js"></script>
       <script src="https://kit.fontawesome.com/7c1b64afba.js" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+      <script>
+        const backgroundVideo = new BackgroundVideo('.bv-video', {
+          src: [
+            'Videos/TeaserTrailerPassFilter.mp4',
+          ],
+          onReady: function () {
+            // Use onReady() to prevent flickers or force loading state
+            const vidParent = document.querySelector(`.${this.bvVideoWrapClass}`);
+            vidParent.classList.add('bv-video-wrap--ready');
+          }
+        });
+      </script>
     </body>
 </html> 

@@ -8,7 +8,7 @@
 #about{
     background-color: white;
     text-align: center;
-    padding: 5%;
+    padding: 1% 3% 3% 3%;
 }
 
 
@@ -23,7 +23,7 @@
 #updates{
     background-color: #edeae1;
     text-align: center;
-    padding: 5%;
+    padding: 0% 5% 5% 5%;
 }
 
 #contact{
@@ -44,19 +44,24 @@
     padding: 3% 0% 2% 0%;
 }
 
-#team h2{
-    padding: 5rem;
-}
-
 h2 {
     color: #12baa8;
     font-family:'Bebas Neue'; 
-    font-size: 40px;
+    padding: 4rem;
 }
 p{
     font-family: Arial, Helvetica, sans-serif;
 }
+/* Updates */
+.juicer-feed{
+    width: 600px;
+    height: 600px;
+    background-color: #edeae1;
+}
 
+#updates h2{
+    margin-top: 2px;
+}
 /* Navigation */
 
 .nav-item a{
@@ -88,8 +93,8 @@ p{
 .linkedin-banner{
     padding: 0.5rem;
     margin: 2% 0;
-    width: auto;
-    height: auto;
+    width: 50%;
+    height: 50%;
     background-color: #212529;
 }
 
@@ -98,7 +103,8 @@ p{
 /* Meet the Team Section */
 
 .card{
-    width: 15rem;
+    width: 50%;
+    
 }
 
 .team-photo{
@@ -135,5 +141,55 @@ p{
     height: 60%;
 }
 
+/* Media Queries */
+
+@media (max-width: 800px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+    .bv-video-container{
+        display: none;
+     
+    }
+
+    /* Title */
+
+    .ladder-giphy{
+        display: none;
+    }
+
+
+    /* Our Games */
+
+    .linkedin-banner{
+        display: none;
+    }
+
+    #games p{
+        padding: 3%
+    }
+
+    #games{
+        padding-bottom: 15%;
+    }
+
+    /* Meet the Team */
+
+    .card{
+        margin-bottom: 5rem;
+        padding: 2%;
+    }
+
+    /* All H2 elements */
+
+    .display-3{
+        padding: 2%;
+    }
+    /* Updates */
+    #updates{
+        padding-bottom: 20%;
+    }
+    
+
+
+  }
 
 
